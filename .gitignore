@@ -1,6 +1,11 @@
 node_modules/
 bower_components/
 *.log
+.DS_Store/
+app/.DS_Store/
+.sass-cache/
+.tmp/
+
 
 build/
 dist/
