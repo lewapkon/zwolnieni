@@ -1,7 +1,8 @@
 (function(window, undefined) {
     'use strict';
-    var heightOfFixedHeader = 0, // for layouts with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
-        scrollTime = 1500,
+    // TODO: adjust it to work on mobile (low resolution)
+    var heightOfFixedHeader = -10, // for layouts with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
+        scrollTime = 1000,
         links = document.getElementsByTagName('a');
 
     console.log(links);
@@ -42,11 +43,10 @@
     function smoothScroll(element, scrollTime) {
         var start = getScrollTopDocument(),
             end = getScrollTopElement(element),
+            startTime = Date.now(),
             frame;
 
         end = end < 0 ? 0 : end;
-
-        var startTime = Date.now();
 
         var step = function() {
             var time = Date.now();
