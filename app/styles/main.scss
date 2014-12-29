@@ -224,9 +224,9 @@ main {
 }
 
 main {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* Height of the header */
-  padding: 60px 16px 16px 16px;
+  /* padding: 60px 16px 16px 16px; */
   min-height: 100%;
 }
 
@@ -305,13 +305,6 @@ main {
   .navdrawer-container ul li {
     border: none;
   }
-/*
-  main {
-    max-width: 864px;
-    padding-top: 0;
-    min-height: initial;
-  }
-*/
   body {
     overflow-y: scroll;
   }
@@ -365,4 +358,72 @@ main {
   src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(../fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(../fonts/RobotoCondensed-BoldItalic.woff) format('woff');
 }
 
-@import 'styles';
+/* ---------------------------- */
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+.container-wrapper {
+  padding: 40px 0;
+  position: relative;
+}
+
+#part1, #part2, #part3 {
+  color: #ffffff;
+}
+
+#part1 {
+  background-color: $colorRed800;
+}
+
+#part2 {
+  background-color: $colorLightBlue800;
+}
+
+#part3 {
+  background-color: $colorGreen800;
+}
+
+$chevron-color: $colorBlueA400;
+$chevron-over-color: $colorBlueA700;
+
+.continue-reading {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+
+  a {
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    left: -30px;
+    display: block;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid $chevron-color;
+
+    color: $chevron-color;
+    &:visited {
+      color: $chevron-color;
+    }
+    &:hover {
+    color: $chevron-over-color;
+    }
+    text-decoration: none;
+
+    .icon {
+      line-height: 60px;
+      display: inline-block;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+}
