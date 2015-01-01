@@ -5,8 +5,6 @@
         scrollTime = 1000,
         links = document.getElementsByTagName('a');
 
-    console.log(links);
-
     Array.prototype.forEach.call(links, function(link) {
         var href = link.attributes.href;
         if (checkIfHrefIsCorrect(href)) {
