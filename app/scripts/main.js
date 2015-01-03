@@ -58,4 +58,12 @@
       return this.slice(-str.length) === str;
     };
   }
+
+  /*
+  window.addEventListener('touchmove', function(e) {
+    if (body.classList.contains('open')) {
+      e.preventDefault();
+    }
+  });
+  */
 })();

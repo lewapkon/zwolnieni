@@ -30,14 +30,14 @@ var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 10',
+  'ie >= 9',
   'ie_mob >= 10',
   'ff >= 30',
   'chrome >= 34',
   'safari >= 7',
   'opera >= 23',
   'ios >= 7',
-  'android >= 4.4',
+  'android >= 4.0',
   'bb >= 10'
 ];
 

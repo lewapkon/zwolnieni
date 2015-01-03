@@ -1,14 +1,15 @@
 (function(window, undefined) {
     'use strict';
     // TODO: adjust it to work on mobile (low resolution)
-    var heightOfFixedHeader = -10, // for layouts with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
+    var heightOfFixedHeader = 50, // for layouts with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
         scrollTime = 1000,
         links = document.getElementsByTagName('a');
 
     Array.prototype.forEach.call(links, function(link) {
         var href = link.attributes.href;
         if (checkIfHrefIsCorrect(href)) {
-            link.addEventListener('mousedown', function() {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
                 var href = this.attributes.href.value.toString(),
                     url = href.substr(0, href.indexOf('#')),
                     id = href.substr(href.indexOf('#') + 1),
@@ -22,6 +23,22 @@
             });
         }
     });
+
+    var bar = document.getElementById('bar');
+
+    window.addEventListener('scroll', function() {
+        window.requestAnimationFrame(scrollHandler);
+    }, false);
+
+    function scrollHandler() {
+        var scrolled = getScrollTopDocument();
+
+        if (scrolled >= 80) {
+            bar.classList.add('fixed');
+        } else {
+            bar.classList.remove('fixed');
+        }
+    }
 
     function checkIfHrefIsCorrect(href) {
         if (typeof href !== 'undefined' && href !== null) {
@@ -61,13 +78,13 @@
                 return;
             }
 
-            frame = requestAnimationFrame(step);
+            frame = window.requestAnimationFrame(step);
         };
 
         if (frame) {
-            cancelAnimationFrame(frame);
+            window.cancelAnimationFrame(frame);
         }
-        frame = requestAnimationFrame(step);
+        frame = window.requestAnimationFrame(step);
     }
 
     function getScrollTopElement(e) {
