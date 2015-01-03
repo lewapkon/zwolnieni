@@ -37,7 +37,7 @@ body.open {
 #landing {
   height:100vh;
   width: 100%;
-  background: url('../images/miasto2.jpg') no-repeat center center; 
+  background: url('../images/miasto2.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
   text-align: center;
@@ -96,6 +96,8 @@ body.open {
 
   h1 {
     text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff;
 
     span {
       font-weight: 700;
@@ -112,6 +114,7 @@ body.open {
 
   p {
     font-weight: 400;
+    color: #eb008b;
   }
 
   a {
