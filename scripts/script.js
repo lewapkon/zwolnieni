@@ -16,4 +16,4 @@ var Base=function(){};Base.extend=function(t,i){"use strict";var e=Base.prototyp
  *  limitations under the License
  *
  */
-function(){"use strict";var t=new Date,i=new Date(2015,1,22),e=(i-t)/1e3;$(".clock").FlipClock(e,{clockFace:"DailyCounter",countdown:!0,language:"polish"})}();
+function(){"use strict";var t=new Date,i=new Date(2015,2,1),e=(i-t)/1e3;$(".clock").FlipClock(e,{clockFace:"DailyCounter",countdown:!0,language:"polish"})}();
