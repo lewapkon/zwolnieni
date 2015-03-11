@@ -59,6 +59,39 @@
     };
   }
 
+  var sourceButton = querySelector('#sourceButton'),
+      sourceDiv = querySelector('#source'),
+      shown = false;
+  sourceButton.addEventListener('click', function() {
+    if (!shown) {
+      addClass(sourceDiv, 'show');
+      //addClass(sourceDiv, 'fadeInDownBig');
+      //addClass(sourceDiv, 'animated');
+      sourceButton.innerHTML = 'Ukryj źródła';
+      shown = true;
+    } else {
+      removeClass(sourceDiv, 'show');
+      sourceButton.innerHTML = 'Pokaż źródła';
+      shown = false;
+    }
+  });
+
+  function addClass(el, className) {
+    if (typeof el.classList !== 'undefined' && el.classList !== null) {
+      el.classList.add(className);
+    } else {
+      el.className += ' ' + className;
+    }
+  }
+
+  function removeClass(el, className) {
+    if (el.classList) {
+      el.classList.remove(className);
+    } else {
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+  }
+
   /*
   window.addEventListener('touchmove', function(e) {
     if (body.classList.contains('open')) {
