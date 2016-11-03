@@ -1,4 +1,5 @@
 zwolnieni
 =========
 
-Strona dla jednego z projektów biorących udział w olimpiadzie [Zwolnieni z teorii](http://zwolnienizteorii.pl).
+Website for a project taking part in Exempt from Theory olympiad (http://zwolnienizteorii.pl) that aimed to
+raise awareness of outdoor advertising problem.
